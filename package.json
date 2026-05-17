@@ -1,4 +1,10 @@
 {
+  "name": "framework-express-ex",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "ejs": "^5.0.2",
     "express": "^5.2.1"
