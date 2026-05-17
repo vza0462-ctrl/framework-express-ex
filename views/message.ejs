@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include("navbar", { links: links }) %>
+
+    <main>
+      <h1><%= title %></h1>
+
+      <article>
+        <p><strong>ID:</strong> <%= messageId %></p>
+        <p><strong>Author:</strong> <%= message.user %></p>
+        <p><strong>Message:</strong> <%= message.text %></p>
+        <p><strong>Added:</strong> <%= message.added.toLocaleString() %></p>
+      </article>
+    </main>
+  </body>
+</html>
