@@ -1,2 +1,6 @@
-<!-- views/user.ejs -->
-<li><%= user %></li>
+<li>
+  <p><strong><%= user.name %></strong></p>
+  <p>Email: <%= user.email %></p>
+  <p>Age: <%= user.age ?? "Not provided" %></p>
+  <p>Bio: <%= user.bio || "No bio yet." %></p>
+</li>

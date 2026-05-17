@@ -18,6 +18,9 @@ const messages = [
 const links = [
   { href: "/", text: "Home" },
   { href: "/new", text: "New Message" },
+  { href: "/users", text: "Users" },
+  { href: "/users/new", text: "Create User" },
+  { href: "/search", text: "Search Users" },
 ];
 
 indexRouter.get("/", (req, res) => {

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include("../navbar", { links: links }) %>
+
+    <main>
+      <h1><%= title %></h1>
+      <p>Search by name, email, or both.</p>
+
+      <%- include("searchForm", { query: query }) %>
+
+      <% if (!hasSubmitted) { %>
+        <p>Enter a name or email to search the user list.</p>
+      <% } else if (users.length === 0) { %>
+        <p>No matching users were found.</p>
+      <% } else { %>
+        <p>Found <%= users.length %> matching user(s).</p>
+        <ul>
+          <% users.forEach((user) => { %>
+            <%- include("user", { user: user }) %>
+          <% }); %>
+        </ul>
+      <% } %>
+    </main>
+  </body>
+</html>

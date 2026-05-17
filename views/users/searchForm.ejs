@@ -1,0 +1,25 @@
+<form method="GET" action="/search">
+  <div>
+    <label for="searchName">Name</label>
+    <input
+      id="searchName"
+      name="name"
+      type="text"
+      value="<%= query.name %>"
+      placeholder="Search by name"
+    />
+  </div>
+
+  <div>
+    <label for="searchEmail">Email</label>
+    <input
+      id="searchEmail"
+      name="email"
+      type="text"
+      value="<%= query.email %>"
+      placeholder="Search by email"
+    />
+  </div>
+
+  <button type="submit">Search</button>
+</form>
